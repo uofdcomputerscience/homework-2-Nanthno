@@ -32,6 +32,16 @@ class ViewController: UIViewController {
         updateResponseLabel()
     }
     
+    @IBAction func orangeButtonTapped(_ sender: Any) {
+        user.favoriteColor = .orange
+        updateResponseLabel()
+    }
+    
+    @IBAction func purpleButtonTapped(_ sender: Any) {
+        user.favoriteColor = .purple
+        updateResponseLabel()
+    }
+    
     func updateResponseLabel() {
         if let color = user.favoriteColor?.displayColor() {
             responseLabel.textColor = color
